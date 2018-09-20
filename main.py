@@ -241,11 +241,11 @@ def run():
         # sess.run(tf.global_variables_initializer())
 
         train_nn(sess, EPOCHS, BATCH_SIZE, get_batches_fn, train_op, cross_entropy_loss, input_image,
-             correct_label, KEEP_PROB, LEARNING_RATE)
+             correct_label, keep_prob, LEARNING_RATE)
 
 
         # TODO: Save inference data using helper.save_inference_samples
-        helper.save_inference_samples(RUNS_DIR, DATA_DIR, sess, IMG_SHAPE, logits, KEEP_PROB, input_image)
+        helper.save_inference_samples(RUNS_DIR, DATA_DIR, sess, IMG_SHAPE, logits, keep_prob, input_image)
 
         # OPTIONAL: Apply the trained model to a video
 
