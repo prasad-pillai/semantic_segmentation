@@ -20,6 +20,7 @@ else:
 # Global Variables
 DATA_DIR = './data'
 RUNS_DIR = './runs'
+IMG_SHAPE = (160, 576)
 
 # Hyper parameters
 L2_REG = 1e-3
@@ -29,7 +30,7 @@ EPOCHS = 20
 BATCH_SIZE = 8
 KEEP_PROB = 0.8
 LEARNING_RATE = 1e-4
-IMG_SHAPE = (160, 576)
+
 
 
 def load_vgg(sess, vgg_path):

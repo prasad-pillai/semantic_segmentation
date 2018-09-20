@@ -1,6 +1,34 @@
 # Semantic Segmentation
 ### Introduction
-In this project, you'll label the pixels of a road in images using a Fully Convolutional Network (FCN).
+In this project, we construct a Fully Convolutional Network (FCN) based on VGG-16 which can label drivable area on the road in a car dashcam image.
+
+### Training
+The hyperparameters used for training are:
+```python
+L2_REG = 1e-3
+STDEV = 1e-2
+NUM_CLASSES = 2
+EPOCHS = 20
+BATCH_SIZE = 8
+KEEP_PROB = 0.8
+LEARNING_RATE = 1e-4
+```
+
+### Results
+Loss starts at 1.416975 at the first epoch and falls to 0.014601 at the 20th epoch.
+
+![result1](./images/epoch1.jpg)
+![result2](./images/epoch2.jpg)
+
+### Samples
+These are some of the sample output images
+
+![sample1](./images/sample1.png)
+![sample2](./images/sample2.png)
+![sample3](./images/sample3.png)
+![sample4](./images/sample4.png)
+![sample5](./images/sample5.png)
+
 
 ### Setup
 ##### GPU
