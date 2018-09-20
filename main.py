@@ -163,9 +163,7 @@ def train_nn(sess, epochs, batch_size, get_batches_fn, train_op, cross_entropy_l
     :param learning_rate: TF Placeholder for learning rate
     """
     # TODO: Implement function
-    
-    sess.run(tf.global_variables_initializer())
-    
+
     print("Training...\n")
     for epoch in range(epochs):
         for image, label in get_batches_fn(batch_size):
@@ -209,6 +207,8 @@ def run():
         logits, train_op, cross_entropy_loss = optimize(nn_last_layer, correct_label, learning_rate, NUM_CLASSES)
 
         # TODO: Train NN using the train_nn function
+
+        sess.run(tf.global_variables_initializer())
         
         train_nn(sess, EPOCHS, BATCH_SIZE, get_batches_fn, train_op, cross_entropy_loss, input_image,
              correct_label, KEEP_PROB, LEARNING_RATE)
