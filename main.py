@@ -170,7 +170,7 @@ def train_nn(sess, epochs, batch_size, get_batches_fn, train_op, cross_entropy_l
         for image, label in get_batches_fn(batch_size):
             _, loss = sess.run([train_op, cross_entropy_loss],
                                feed_dict={input_image: image, correct_label: label, keep_prob: KEEP_PROB, learning_rate: LEARNING_RATE})
-            print("EPOCH: {0}/{1} Loss: {.3f}".format(epoch+1, epochs, loss))
+            print("EPOCH: {0}/{1} Loss: {2:4f}".format(epoch+1, epochs, loss))
 
 # def train_nn(sess, epochs, batch_size, get_batches_fn, train_op, cross_entropy_loss, input_image,
 #              correct_label, keep_prob, learning_rate):
